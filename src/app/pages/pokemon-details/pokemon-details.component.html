@@ -1,0 +1,17 @@
+<section class="details">
+    <h1>{{ pokemon.name  }}</h1> <button  (click)="close()">close</button>
+    <img [src]="pokemon.sprites.front_default" class="img-detail">
+    
+    <p><strong>Type</strong></p>
+    <p *ngFor="let type of pokemon.types" class="types"> {{type}} </p>
+    <br>
+    <p><strong>Habitat</strong></p>
+    <p  class="types"> {{pokemon.habitat}} </p> <br>
+
+    <p><strong>Description</strong></p>
+    <p *ngFor="let desc of pokemon.descriptions" class="types"> {{desc.label}} </p>
+
+    
+    
+</section>
+

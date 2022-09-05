@@ -1,0 +1,14 @@
+<section class="title">
+    <h1>Pokedex random</h1>
+    <p>For more detail, double click on the cards</p>
+</section>
+<section class=" container">
+    <div *ngFor="let pokemon of pokemonArray" class="card" (dblclick)="showDetails(pokemon)">
+        <p>{{pokemon.name}}</p>
+        <div class="image-container">
+            <img [src]="pokemon.blobContainer" >
+        </div>
+        <img [src]="pokemon.sprites.front_default" class="img-pokemon">
+        <p *ngFor="let type of pokemon.types" class="types"> {{type}} </p>
+    </div>
+</section>
