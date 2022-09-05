@@ -1,0 +1,1 @@
+body{background:linear-gradient(-45deg,rgba(238,118,82,.6784313725),rgba(235,34,68,.7725490196),rgba(35,165,213,.7882352941),rgba(35,213,171,.6980392157));background-size:400% 400%;animation:gradient 55s ease infinite;height:100vh}@keyframes gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}to{background-position:0% 50%}}
