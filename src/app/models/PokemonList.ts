@@ -18,7 +18,8 @@ export interface Pokemon extends PokemonList {
         front_shiny_female? : string;
     } | any;
     descriptions?: DescriptionData[];
-    habitat?:string
+    habitat?:string;
+    abilites?: string[]
 
 }
 

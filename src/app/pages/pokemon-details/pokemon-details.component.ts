@@ -32,11 +32,16 @@ export class PokemonDetailsComponent implements OnInit {
     const detailPokemon = await firstValueFrom(this.pokemonAPI.getDetails(this.namePokemon)) as any
     const species = await firstValueFrom(this.pokemonAPI.getSpecies(detailPokemon.id)) as any
     const typesData = detailPokemon.types.map((typeData:any) => {return typeData.type.name })
+    const abilitesArray = detailPokemon.abilities.map((abilitie:any) => {return abilitie.name })
 
     this.pokemon = detailPokemon;
     this.pokemon.sprites = detailPokemon.sprites
     this.pokemon.types = typesData;
     this.pokemon.habitat = species.habitat.name;
+    this.pokemon.abilites = abilitesArray;
+
+    console.log("detailPokemon: ", detailPokemon)
+    console.log("species: ", species)
 
     let descriptions = species.flavor_text_entries.map((data:any) => {
       return { label: data.flavor_text, language: data.language.name }
