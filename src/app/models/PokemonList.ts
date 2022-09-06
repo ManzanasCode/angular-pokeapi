@@ -20,7 +20,6 @@ export interface Pokemon extends PokemonList {
     descriptions?: DescriptionData[];
     habitat?:string;
     abilites?: string[]
-
 }
 
 export interface DescriptionData {
